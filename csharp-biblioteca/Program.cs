@@ -41,6 +41,9 @@
             User user01 = new User("Tamburini", "Giovanni", "giovanni@mail.it", "password", "339 4583029");
             User user02 = new User("Bianchi", "Giulia", "giulia@mail.it", "password1", "339 1234529");
 
+            string user01Surname = user01.Surname;
+            string user01Name = user01.Name;
+
             // istanzio un nuovo libro della sottoclasse Book
             Book ilVisconteDimezzato = new Book("027947478", "Il Visconte Dimezzato", 1952, "letteratura", "A05", "Italo Calvino", 144);
             Book cleanCode = new Book("0132350882", "Clean Code", 2008, "programmazione", "G11", "Robert C. Martin", 431);
@@ -49,6 +52,11 @@
             Dvd interstellar = new Dvd("03496484", "Interstellar", 2014, "fantascienza", "C09", "Christopher Nolan", 169);
             Dvd batmanBegins = new Dvd("03986583", "Batman Begins", 2005, "azione, fantastico", "C25", "Christopher Nolan", 140);
 
+
+            Loan loan01 = new Loan(user01.Surname, user01.Name, batmanBegins, DateTime.Now.AddDays(14));
+            Loan loan02 = new Loan(user02.Surname, user02.Name, cleanCode, DateTime.Now.AddDays(20));
+            //Loan loan02 = new Loan()
+            
             // creazione lista utenti
             List<User> users = new List<User>();
 

@@ -22,29 +22,35 @@ namespace csharp_biblioteca
         // METODI
 
         // metodo per l'aggiunta del documento
-        public List<Document> AddDocument(Document document)
+        public void AddDocument(Document document)
         {
             Documents.Add(document);
-
-            return Documents;
         }
 
         // metodo per l'aggiunta del'utente
-        public List<User> AddUser(User user)
+        public void AddUser(User user)
         {
             Users.Add(user);
-
-            return Users;
         }
 
-        // metodo per la ricerca di un documento per titolo
+        // metodo per l'aggiunta del prestito
+        public void AddLoan(Loan loan)
+        {
+            Loans.Add(loan);
+        }
 
-        // metodo per la ricerca di un documento per codice
-        
+        // metodo per la ricerca di un documento per titolo || per codice
+        public List<Document> SearchDocument(string chiaveRicerca)
+        {
+            return Documents.Where(doc => doc.Title.Contains(chiaveRicerca) || doc.IdentificationNumber.Contains(chiaveRicerca)).ToList();
+        }
 
-        //public List<Loan> AddLoan(User userName, User userSurname, Document document, DateTime endDate)
-        //{
-        //    
-        //}
+        // metodo per la ricerca del prestito per utente (nome && cognome)
+        public List<Loan> SearchLoanByUserNameOrUserSurname(string name, string surname)
+        {
+            return Loans.Where(loan => loan.UserName == name && loan.UserSurname == surname).ToList();
+        }
+
+        //public void RegisterLoan
     }
 }
