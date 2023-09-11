@@ -24,6 +24,5 @@ namespace csharp_biblioteca
             this.Password = password;
             this.TelephoneNumber = telephoneNumber;
         } 
-
     }
 }

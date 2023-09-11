@@ -10,14 +10,14 @@ namespace csharp_biblioteca
     {
         public string IdentificationNumber { get; }
         public string Title { get; }
-        public string Year { get; }
+        public int Year { get; }
         public string Sector { get; }
         public string Shelf { get; set; }
         public string Author { get; }
 
 
         // COSTRUTTORE
-        public Document(string identificationNumber, string title, string year, string sector, string shelf, string author)
+        public Document(string identificationNumber, string title, int year, string sector, string shelf, string author)
         {
             this.IdentificationNumber = identificationNumber;
             this.Title = title;

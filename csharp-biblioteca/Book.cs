@@ -10,7 +10,7 @@ namespace csharp_biblioteca
     {
         public int PagesNumber { get; }
 
-        public Book (string identificationNumber, string title, string year, string sector, string shelf, string author, int pagesNumber) : base(identificationNumber, title, year, sector, shelf, author)
+        public Book (string identificationNumber, string title, int year, string sector, string shelf, string author, int pagesNumber) : base(identificationNumber, title, year, sector, shelf, author)
         {
             this.PagesNumber = pagesNumber;
         }
