@@ -49,23 +49,57 @@
             Dvd interstellar = new Dvd("03496484", "Interstellar", 2014, "fantascienza", "C09", "Christopher Nolan", 169);
             Dvd batmanBegins = new Dvd("03986583", "Batman Begins", 2005, "azione, fantastico", "C25", "Christopher Nolan", 140);
 
-            // creazione array utenti
+            // creazione lista utenti
             List<User> users = new List<User>();
-            // aggiungo gli utenti, creati precedentemente, alla lista "users"
-            users.Add(user01);
-            users.Add(user02);
 
-            // creazione array libri
-            List<Book> books = new List<Book>();
-            // aggiungo i libri, creati precedentemente, alla lista "books"
-            books.Add(ilVisconteDimezzato);
-            books.Add(cleanCode);
+            // creazione lista documenti
+            List<Document> documents = new List<Document>();
 
-            // creazione array dvd
-            List<Dvd> dvds = new List<Dvd>();
-            // aggiungo i dvd, creati precedentemente, alla lista "dvds"
-            dvds.Add(interstellar);
-            dvds.Add(batmanBegins);
+            // creazione lista prestiti
+            List<Loan> loans = new List<Loan>();
+
+            Library library01 = new Library(documents, users, loans);
+
+            // aggiungo i due utenti istanziati sopra alla lista degli utenti tramite il metodo della classe library
+            library01.AddUser(user01);
+            library01.AddUser(user02);
+
+            // aggiungo i due libri istanziati sopra alla lista dei documenti tramite il metodo della classe library
+            library01.AddDocument(ilVisconteDimezzato);
+            library01.AddDocument(cleanCode);
+
+            // aggiungo i due dvd istanziati sopra alla lista dei documenti tramite il metodo della classe library
+            library01.AddDocument(interstellar);
+            library01.AddDocument(batmanBegins);
+
+            Console.WriteLine("LISTA DEGLI UTENTI REGISTRATI NELLA LIBRERY01:");
+            // stampo a schermo le info di tutti gli utenti registrati nella biblioteca library01
+            foreach(User user in library01.Users)
+            {
+                Console.WriteLine(user.Surname);
+                Console.WriteLine(user.Name);
+                Console.WriteLine(user.Email);
+                Console.WriteLine(user.Password);
+                Console.WriteLine(user.TelephoneNumber);
+                Console.WriteLine("-----------------");
+            }
+
+            Console.WriteLine("LISTA DOCUMENTI CONTENUTI NELLA LIBRARY01:");
+            // stampo a schermo le info di tutti i documenti contenuti nella biblioteca library01
+            foreach (Document document in library01.Documents)
+            {
+                Console.WriteLine(document.IdentificationNumber);
+                Console.WriteLine(document.Title);
+                Console.WriteLine(document.Year);
+                Console.WriteLine(document.Sector);
+                Console.WriteLine(document.Shelf);
+                Console.WriteLine(document.Author);
+                Console.WriteLine("-----------------");
+            }
+
+
+
+
         }
     }
 }
