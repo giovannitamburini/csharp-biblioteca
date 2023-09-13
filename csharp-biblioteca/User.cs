@@ -8,8 +8,8 @@ namespace csharp_biblioteca
 {
     public class User
     {
-        public string Surname { get; }
-        public string Name { get; }
+        public string Surname { get; set; }
+        public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
         public string TelephoneNumber { get; set; }
@@ -23,6 +23,6 @@ namespace csharp_biblioteca
             this.Email = email;
             this.Password = password;
             this.TelephoneNumber = telephoneNumber;
-        } 
+        }
     }
 }

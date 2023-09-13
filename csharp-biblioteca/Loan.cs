@@ -23,6 +23,7 @@ namespace csharp_biblioteca
         //    this.EndDate = endDate;
         //}
 
+        // principio della composizione
         public string UserName { get; set; }
         public string UserSurname { get; set; }
         public Document Document { get; set; }

@@ -9,7 +9,7 @@ namespace csharp_biblioteca
     public class Dvd : Document
     {
         // ATTRIBUTI, PROPRIETA', STATI
-        public int DurationInMinutes { get; }
+        public int DurationInMinutes { get; set; }
 
         public Dvd(string identificationNumber, string title, int year, string sector, string shelf, string author, int durationInMinutes) : base(identificationNumber, title, year, sector, shelf, author)
         {

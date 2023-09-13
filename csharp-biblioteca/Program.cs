@@ -66,6 +66,7 @@
             // creazione lista prestiti
             List<Loan> loans = new List<Loan>();
 
+            // creazione di una libreria
             Library library01 = new Library(documents, users, loans);
 
             // aggiungo i due utenti istanziati sopra alla lista degli utenti tramite il metodo della classe library
@@ -80,7 +81,7 @@
             library01.AddDocument(interstellar);
             library01.AddDocument(batmanBegins);
 
-            Console.WriteLine("LISTA DEGLI UTENTI REGISTRATI NELLA LIBRERY01:");
+            Console.WriteLine("LISTA DEGLI UTENTI REGISTRATI NELLA 'LIBRERY01':");
             // stampo a schermo le info di tutti gli utenti registrati nella biblioteca library01
             foreach(User user in library01.Users)
             {
@@ -92,7 +93,7 @@
                 Console.WriteLine("-----------------");
             }
 
-            Console.WriteLine("LISTA DOCUMENTI CONTENUTI NELLA LIBRARY01:");
+            Console.WriteLine("LISTA DOCUMENTI CONTENUTI NELLA 'LIBRARY01':");
             // stampo a schermo le info di tutti i documenti contenuti nella biblioteca library01
             foreach (Document document in library01.Documents)
             {
@@ -104,10 +105,6 @@
                 Console.WriteLine(document.Author);
                 Console.WriteLine("-----------------");
             }
-
-
-
-
         }
     }
 }
