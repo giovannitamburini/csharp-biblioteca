@@ -40,6 +40,7 @@
             // istanzio un nuovo utente
             User user01 = new User("Tamburini", "Giovanni", "giovanni@mail.it", "password", "339 4583029");
             User user02 = new User("Bianchi", "Giulia", "giulia@mail.it", "password1", "339 1234529");
+            User user03 = new User("Cavolo", "Cappuccio", "cavolocappuccio@mail.it", "password2", "338 4749393");
 
             string user01Surname = user01.Surname;
             string user01Name = user01.Name;
@@ -105,6 +106,10 @@
                 Console.WriteLine(document.Author);
                 Console.WriteLine("-----------------");
             }
+
+            library01.RegisterLoan(user01, cleanCode, DateTime.Now.AddDays(11));
+            library01.RegisterLoan(user01, cleanCode, DateTime.Now.AddMonths(1));
+            library01.RegisterLoan(user03, batmanBegins, DateTime.Now.AddDays(5));
         }
     }
 }
